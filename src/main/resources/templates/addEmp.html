@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add employee</title>
+</head>
+<body>
+    <form th:object="${employee}" th:action="@{/addEmp}" method="post">
+        <input type="text" th:field="*{name}"  placeholder="name" required>
+        <br>
+        <br>
+        <input type="email" th:field="*{email}" placeholder="email" required>
+        <br>
+        <br>
+        <select id="dptType" th:field="*{dptType}" required>
+            <option value="HR">HR</option>
+            <option value="design">design</option>
+            <option value="production">production</option>
+        </select>
+      
+        <br>
+        <br>
+        <input type="text" th:field="*{salary}" placeholder="salary" required>
+        <br>
+        <br>
+        <button type="submit">Add User</button>
+    </form>
+</body>
+</html>
