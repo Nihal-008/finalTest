@@ -11,7 +11,7 @@
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
+              
                 <th>Name</th>
                 <th>Email</th>
                 <th>Department Type</th>
@@ -21,7 +21,7 @@
         <tbody>
           
             <tr th:each="employee : ${employees}">
-                <td th:text="${employee.id}"></td>
+                
                 <td th:text="${employee.name}"></td>
                 <td th:text="${employee.email}"></td>
                 <td th:text="${employee.dptType}"></td>
